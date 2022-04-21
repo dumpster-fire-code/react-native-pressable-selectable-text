@@ -26,7 +26,7 @@
   "scripts": {
     "build": "tsc --project ./tsconfig.json",
     "prepare": "yarn build",
-    "pub": "npm version patch && npm publish --registry http://localhost:4873/",
+    "pub": "npm version patch && npm publish",
     "sync": "yarn yalc publish && cd example && yalc add @dumpster-fire-code/react-native-pressable-selectable-text",
     "watch": "watchman-make --pattern 'src/**/*' --run 'yarn sync'",
     "format": "prettier --write \"**/*.{ts,tsx,js,json}\"",

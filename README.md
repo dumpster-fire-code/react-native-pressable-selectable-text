@@ -30,6 +30,8 @@ function MyComponent {
 }
 ```
 
+The `SelectableText` component is a thin wrapper around React Native's [`TextInput`](https://reactnative.dev/docs/textinput) and accepts all the same properties, other than `value` – which is instead expected as `children`.
+
 ## :hammer: Development
 
 ### Installing dependencies

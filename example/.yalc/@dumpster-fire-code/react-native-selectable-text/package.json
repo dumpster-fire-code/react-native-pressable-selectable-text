@@ -1,0 +1,27 @@
+{
+  "name": "@dumpster-fire-code/react-native-selectable-text",
+  "version": "0.0.1",
+  "description": "Selectable and pressable text component for React Native",
+  "author": "dumpster fire code",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc --project ./tsconfig.json",
+    "pub": "npm version patch && npm publish --registry http://localhost:4873/",
+    "sync": "yarn yalc publish && cd example && yalc add @dumpster-fire-code/react-native-selectable-text",
+    "watch": "watchman-make --pattern 'src/**/*' --run 'yarn sync'",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json}\"",
+    "lint": "yarn eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "peerDependencies": {
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.3"
+  },
+  "yalcSig": "b9954c6b313c2e7afa8f7b7f52d1315b"
+}

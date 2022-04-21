@@ -1,0 +1,60 @@
+{
+  "name": "@dumpster-fire-code/react-native-pressable-selectable-text",
+  "version": "1.0.0",
+  "description": "A selectable and pressable text component for React Native",
+  "author": "dumpster fire code",
+  "homepage": "https://github.com/dumpster-fire-code/react-native-pressable-selectable-text",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dumpster-fire-code/react-native-pressable-selectable-text.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dumpster-fire-code/react-native-pressable-selectable-text/issues",
+    "email": "dumpsterfirecode@protonmail.com"
+  },
+  "keywords": [
+    "react-native",
+    "selectable",
+    "pressable",
+    "text",
+    "input",
+    "react"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc --project ./tsconfig.json",
+    "prepare": "yarn build",
+    "pub": "npm version patch && npm publish --registry http://localhost:4873/",
+    "sync": "yarn yalc publish && cd example && yalc add @dumpster-fire-code/react-native-pressable-selectable-text",
+    "watch": "watchman-make --pattern 'src/**/*' --run 'yarn sync'",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json}\"",
+    "lint": "yarn eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "devDependencies": {
+    "@types/react": "^18.0.5",
+    "@types/react-native": "^0.67.4",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.13.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-no-restricted-imports": "^0.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "prettier": "^2.6.2",
+    "pretty-quick": "^3.1.3",
+    "typescript": "^4.6.3",
+    "yalc": "^1.0.0-pre.53"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "react-native": "*"
+  }
+}

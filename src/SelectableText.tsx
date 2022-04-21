@@ -12,8 +12,7 @@ interface SelectableTextProps extends Omit<TextInputProps, 'value'> {
   onPress?: (e: NativeSyntheticEvent<NativeTouchEvent>) => void;
 }
 
-const defaultProps: SelectableTextProps = {
-  children: '',
+const defaultProps: Omit<SelectableTextProps, 'children'> = {
   editable: false,
   multiline: true,
 };

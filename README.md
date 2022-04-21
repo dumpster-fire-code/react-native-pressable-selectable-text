@@ -2,6 +2,8 @@
 
 A selectable and pressable text component for React Native.
 
+https://user-images.githubusercontent.com/103694056/164523570-5cbf94e6-78d8-4958-ac73-9bd02a32b9d5.mov
+
 ## :package: Installation
 
 ### Using Yarn

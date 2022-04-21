@@ -15,11 +15,12 @@ interface SelectableTextProps extends Omit<TextInputProps, 'value'> {
 const defaultProps: Omit<SelectableTextProps, 'children'> = {
   editable: false,
   multiline: true,
+  scrollEnabled: false,
 };
 
 const SelectableText: FC<SelectableTextProps> = ({
   children: value,
-  onPress,
+  onPress: onPressProp,
   onPressOut: onPressOutProp,
   onSelectionChange: onSelectionChangeProp,
   ...props
@@ -32,11 +33,14 @@ const SelectableText: FC<SelectableTextProps> = ({
         onPressOutProp(e);
       }
 
-      if (onPress && selectionRef.current.start === selectionRef.current.end) {
-        onPress(e);
+      if (
+        onPressProp &&
+        selectionRef.current.start === selectionRef.current.end
+      ) {
+        onPressProp(e);
       }
     },
-    [onPress, onPressOutProp],
+    [onPressProp, onPressOutProp],
   );
 
   const onSelectionChange = useCallback(

@@ -18,7 +18,7 @@ npm install --save @dumpster-fire-code/react-native-pressable-selectable-text
 
 ## :rocket: Usage
 
-```typescript
+```tsx
 import { SelectableText } from '@dumpster-fire-code/react-native-pressable-selectable-text';
 
 function MyComponent {

@@ -61,5 +61,5 @@ buck-out/
 # Packages
 lib/
 
-yalc
-yalc.lock
+**/.yalc
+**/yalc.lock
